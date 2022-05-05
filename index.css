@@ -59,6 +59,10 @@ body{
     line-height: 24px;
 }
 
+.top-infocard-image{
+    max-width: 100%;
+}
+
 .top-cards{
     display: grid;
     grid-template-columns: repeat(3, max-content);
@@ -88,10 +92,62 @@ body{
     font-size: 16px;
 }
 
+.middle-banners{
+    background: #E0E0E0;
+    max-height: 442px;
+}
+
+.middle-banners-desktop{
+    position: relative;
+    top: 62px;
+    max-width: 1732px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 32px;
+}
+
+.middle-banner-desktop{
+    max-width: 100%;
+}
+
+.middle-banners-mobile{
+    display: flex;
+    flex-direction: column;
+    margin: 0 23px;
+    position: relative;
+    top: 32px;
+}
+
+.banner-top-mobile{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 14px;
+    margin-bottom: 24px;
+}
+
+.middle-banners-mobile-top, .middle-banners-mobile-middle{
+    width: 100%;
+    height: auto;
+}
+
+.middle-banners-mobile-bottom{
+    max-width: 100%;
+}
+
 /* Usei dimensão de Mobile Large sugerida pelo Google Chrome */
 @media screen and (max-width: 425px) {
     .main-banner-desktop{
         display: none;
+    }
+
+    .middle-banners-desktop{
+        display: none;
+    }
+
+    .middle-banners{
+        max-height: 414px;
     }
 }
 
@@ -99,12 +155,21 @@ body{
     .main-banner-mobile{
         display: none;
     }
+
+    .middle-banners-mobile{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .top-cards{
         grid-template-columns: 1fr;
-        padding: 0 32px;
+        padding: 0 32px 80px;
+    }
+
+    .bottom-cards{
+        grid-template-columns: 1fr;
+        padding: 202px 22px 80px;
     }
 }
 
@@ -135,5 +200,23 @@ body{
     .top-cards{
         grid-template-columns: repeat(2, max-content);
         padding: 36px 26px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+    .middle-banners-desktop{
+        margin: 0 34px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .middle-banners-desktop{
+        margin: 0 94px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .middle-banners-desktop{
+        margin: auto;
     }
 }
