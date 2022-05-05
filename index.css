@@ -95,6 +95,7 @@ body{
 .middle-banners{
     background: #E0E0E0;
     max-height: 442px;
+    margin-bottom: 280px;
 }
 
 .middle-banners-desktop{
@@ -136,6 +137,37 @@ body{
     max-width: 100%;
 }
 
+.bottom-cards{
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 80px;
+    max-width: 1776px;
+    margin: auto;
+}
+
+.bottom-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 34px 32px 66px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.23);
+}
+
+.bottom-card-image{
+    display: block;
+    margin-bottom: 14px;
+}
+
+.bottom-card-description{
+    max-width: 368px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+}
+
 /* Usei dimensão de Mobile Large sugerida pelo Google Chrome */
 @media screen and (max-width: 425px) {
     .main-banner-desktop{
@@ -167,9 +199,14 @@ body{
         padding: 0 32px 80px;
     }
 
+    .middle-banners{
+        margin-bottom: 54%;
+    }
+
+
     .bottom-cards{
         grid-template-columns: 1fr;
-        padding: 202px 22px 80px;
+        padding: 0 22px 80px;
     }
 }
 
@@ -193,6 +230,19 @@ body{
 
     .top-infocard-description{
         text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 900px){
+    .bottom-cards{
+        grid-template-columns: repeat(1, max-content);
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1830px){
+    .bottom-cards{
+        grid-template-columns: repeat(2, max-content);
     }
 }
 
