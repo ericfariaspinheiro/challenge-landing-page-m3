@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Inter', sans-serif;
+    color: #000000;
+}
+
 /* Usei grid parada centralizar pois ele alinha nos eixos verical e horizontal com uma única propriedade */
 .page-header{
     background-color: #000000;
@@ -21,6 +26,39 @@
     width: 100%;
 }
 
+.top-infocard{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top-infocard-text{
+    max-width: 766px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 66px 0;
+}
+
+.top-infocard-subtitle{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 32px;
+    margin-top: 22px;
+}
+
+.top-infocard-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.top-infocard-description{
+    font-size: 16px;
+    line-height: 24px;
+}
+
 /* Usei dimensão de Mobile Large sugerida pelo Google Chrome */
 @media screen and (max-width: 425px) {
     .main-banner-desktop{
@@ -31,5 +69,28 @@
 @media screen and (min-width: 426px) {
     .main-banner-mobile{
         display: none;
+    }
+}
+
+@media screen and (max-width: 992px)  {
+    .top-infocard{
+        padding: 84px 28px 158px;
+    }
+
+    .top-infocard-text {
+        margin: 0 0 68px;
+    }
+
+    .top-infocard-subtitle{
+        font-size: 20px;
+    }
+
+    .top-infocard-title{
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .top-infocard-description{
+        text-align: center;
     }
 }
