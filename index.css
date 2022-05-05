@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-header{
+    background-color: #000000;
+    display: grid;
+    place-content: center;
+    padding: 28px 0;
+}
