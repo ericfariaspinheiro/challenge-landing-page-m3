@@ -9,7 +9,11 @@ body{
     color: #000000;
 }
 
-/* Usei grid parada centralizar pois ele alinha nos eixos verical e horizontal com uma única propriedade */
+
+/* 
+    Page Header
+    Obs: Usei grid parada centralizar pois ele alinha nos eixos verical e horizontal com uma única propriedade 
+*/
 .page-header{
     background-color: #000000;
     display: grid;
@@ -21,10 +25,17 @@ body{
     display: block;
 }
 
+/*
+    Page Banner
+*/
 .main-banner{
     display: block;
     width: 100%;
 }
+
+/*
+    Top Inforcard
+*/
 
 .top-infocard{
     display: flex;
@@ -63,6 +74,10 @@ body{
     max-width: 100%;
 }
 
+/*
+    Top Cards
+*/
+
 .top-cards{
     display: grid;
     grid-template-columns: repeat(3, max-content);
@@ -91,6 +106,10 @@ body{
     line-height: 24px;
     font-size: 16px;
 }
+
+/*
+    Middle Banners
+*/
 
 .middle-banners{
     background: #E0E0E0;
@@ -137,6 +156,10 @@ body{
     max-width: 100%;
 }
 
+/*
+    Bottom Cards
+*/
+
 .bottom-cards{
     display: grid;
     grid-template-columns: repeat(4, max-content);
@@ -168,6 +191,70 @@ body{
     font-size: 16px;
 }
 
+/*
+    Bottom Infocard
+*/
+
+.bottom-infocard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 104px;
+    gap: 80px;
+}
+
+.bottom-infocard-text{
+    max-width: 998px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.bottom-infocard-title{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 20px;
+    margin-bottom: 18px;
+}
+
+.bottom-infocard-description{
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.bottom-infocard-image{
+    max-width: 100%;
+}
+
+/*
+    Page Footer
+*/
+
+.page-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000000;
+    padding: 38px 0;
+}
+
+.footer-icons{
+    display: flex;
+    list-style: none;
+    margin-bottom: 16px;
+    gap: 16px;
+    align-items: center;
+}
+
+.footer-icon{
+    display: block;
+}
+
+.footer-text{
+    color: #BDBDBD;
+}
+
 /* Usei dimensão de Mobile Large sugerida pelo Google Chrome */
 @media screen and (max-width: 425px) {
     .main-banner-desktop{
@@ -181,6 +268,21 @@ body{
     .middle-banners{
         max-height: 414px;
     }
+
+    .bottom-infocard{
+        flex-direction: column-reverse;   
+        gap: 50px;
+        align-items: unset;
+    }
+
+    .bottom-infocard-image-desktop{
+        display: none;
+    }
+
+    .bottom-infocard-title{
+        font-size: 24px;
+        line-height: 20px;
+    }
 }
 
 @media screen and (min-width: 426px) {
@@ -191,6 +293,10 @@ body{
     .middle-banners-mobile{
         display: none;
     }
+
+    .bottom-infocard-image-mobile{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -199,14 +305,14 @@ body{
         padding: 0 32px 80px;
     }
 
-    .middle-banners{
-        margin-bottom: 54%;
-    }
-
-
     .bottom-cards{
         grid-template-columns: 1fr;
         padding: 0 22px 80px;
+    }
+
+    .footer-text{
+        max-width: 380px;
+        text-align: center;
     }
 }
 
@@ -232,6 +338,9 @@ body{
         text-align: center;
     }
 
+    .bottom-infocard-text{
+        margin: 0 32px;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 900px){
@@ -249,7 +358,7 @@ body{
 @media screen and (min-width: 769px) and (max-width: 1200px) {
     .top-cards{
         grid-template-columns: repeat(2, max-content);
-        padding: 36px 26px;
+        padding: 188px 26px 80px;
     }
 }
 
