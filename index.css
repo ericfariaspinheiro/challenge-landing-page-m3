@@ -4,9 +4,32 @@
     box-sizing: border-box;
 }
 
+/* Usei grid parada centralizar pois ele alinha nos eixos verical e horizontal com uma única propriedade */
 .page-header{
     background-color: #000000;
     display: grid;
     place-content: center;
     padding: 28px 0;
+}
+
+.header-logo{
+    display: block;
+}
+
+.main-banner{
+    display: block;
+    width: 100%;
+}
+
+/* Usei dimensão de Mobile Large sugerida pelo Google Chrome */
+@media screen and (max-width: 425px) {
+    .main-banner-desktop{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 426px) {
+    .main-banner-mobile{
+        display: none;
+    }
 }
